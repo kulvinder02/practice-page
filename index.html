@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>From Validation / Lottie</title>
+   
+</head>
+
+<body>
+    <section>
+        <!-- -----------form validation--------------- -->
+         <form id="summit">
+            <input placeholder="First Name" id="name" type="text">
+            <input placeholder="Last Name" id="lastname" type="text">
+            <input placeholder="Mobile" id="number" type="number">
+            <input placeholder="Email Address" id="email" type="email">
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- ---------------lottie-------- -->
+        <lottie-player src="./assets/lottie.json/bounce.json" background="transparent" speed="1"
+            style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+       
+    </section>
+
+    <!-- -----------form js-------------- -->
+    <script>
+        const name = document.getElementById("name")
+        const lastname = document.getElementById("lastname")
+        const number = document.getElementById("number")
+        const email = document.getElementById("email")
+        document.getElementById("summit").addEventListener("submit",
+            function formSubmittion(e) {
+                e.preventDefault()
+                if (name.value != "" && lastname.value != "" && number.value != "" && email.value != "") {
+                    console.log(`name of user ${name.value}`)
+                    console.log(`lastname of user ${lastname.value}`)
+                    console.log(`number of user ${number.value}`)
+                    console.log(`email of user ${email.value}`)   
+                    this.reset()
+                }
+                else {
+                    alert("Fill Required Things")
+                }
+            })
+    </script>
+
+    <!-- --------------lottie link------------- -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>
