@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html mode="light" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,8 @@
             style="width: 300px; height: 300px;" loop autoplay></lottie-player>
        
     </section>
-
+    <button id="theme-changer">toggle-theme</button>
+   
     <!-- -----------form js-------------- -->
     <script>
         const name = document.getElementById("name")
@@ -46,6 +47,17 @@
                     alert("Fill Required Things")
                 }
             })
+        document.getElementById("theme-changer").addEventListener("click", function () {
+            if (document.documentElement.getAttribute("mode") === "light") {
+                document.documentElement.setAttribute("mode", "dark")
+            }
+            else if (document.documentElement.getAttribute("mode") === "dark") {
+                document.documentElement.setAttribute("mode", "orange")
+            }
+            else {
+                document.documentElement.setAttribute("mode", "light")
+            }
+        })
     </script>
 
     <!-- --------------lottie link------------- -->

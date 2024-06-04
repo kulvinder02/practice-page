@@ -21,7 +21,7 @@ input {
  button{
     padding: 10px 10px;
     border: 2px solid transparent;
-    background-color: black;
+    background-color: green;
     font-size: 20px;
     color: white;
     transition: all .2s ease-in-out;
@@ -30,6 +30,28 @@ input {
 
 button:hover {
     color: black;
-    background: transparent;
+    background: red;
     border: 2px solid black; 
 }
+body {
+    background: var(--white-color);
+}
+
+/* dark mode */
+
+:root {
+    --black-color: #000000;
+    --white-color: #ffffff;
+}
+
+
+[mode="dark"] {
+    --black-color: #ffffff;
+    --white-color: #000000;
+}
+
+[mode="orange"] {
+    --black-color: #000000;
+    --white-color: #ff8800;
+}
+
